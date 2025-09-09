@@ -1,78 +1,188 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solar System Portal</title>
+  <meta name="description" content="Click a solar system body to visit its NASA page." />
+  <style>
+    /* --- Base + Theme --- */
+    :root {
+      --space-bg: url('https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-h-p2001a-f-2000x1500_0.png');
+      /* "sand blue" inspired tint */
+      --sand-blue: hsl(205 38% 78% / 0.88);
+      --card-bg: #ffffff;
+      --text: #0b1324;
+      --text-dim: #22314c;
+      --ring: 0 0 0 2px rgba(50, 100, 160, 0.45);
+      --radius-lg: 20px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.25);
+      --shadow-hover: 0 16px 40px rgba(0,0,0,0.35);
+    }
 
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background-image: var(--space-bg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
 
-const solarBodies = [
-{
-name: "Sun",
-img: "https://solarsystem.nasa.gov/system/feature_items/images/27_sun.png",
-url: "https://solarsystem.nasa.gov/solar-system/sun/overview/",
-},
-{
-name: "Mercury",
-img: "https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png",
-url: "https://solarsystem.nasa.gov/planets/mercury/overview/",
-},
-{
-name: "Venus",
-img: "https://solarsystem.nasa.gov/system/feature_items/images/27_venus_jg.png",
-url: "https://solarsystem.nasa.gov/planets/venus/overview/",
-},
-{
-name: "Earth",
-img: "https://solarsystem.nasa.gov/system/feature_items/images/17_earth.png",
-url: "https://solarsystem.nasa.gov/planets/earth/overview/",
-},
-{
-name: "Mars",
-img: "https://solarsystem.nasa.gov/system/feature_items/images/19_mars.png",
-url: "https://solarsystem.nasa.gov/planets/mars/overview/",
-},
-{
-name: "Jupiter",
-img: "https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png",
-url: "https://solarsystem.nasa.gov/planets/jupiter/overview/",
-},
-{
-name: "Saturn",
-img: "https://solarsystem.nasa.gov/system/feature_items/images/28_saturn.png",
-url: "https://solarsystem.nasa.gov/planets/saturn/overview/",
-},
-{
-name: "Uranus",
-img: "https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png",
-url: "https://solarsystem.nasa.gov/planets/uranus/overview/",
-},
-{
-name: "Neptune",
-img: "https://solarsystem.nasa.gov/system/feature_items/images/30_neptune.png",
-url: "https://solarsystem.nasa.gov/planets/neptune/overview/",
-},
-];
+    /* --- Center Box --- */
+    .panel {
+      width: min(1100px, 100%);
+      background: var(--sand-blue);
+      backdrop-filter: blur(2px);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: clamp(16px, 2.5vw, 28px);
+      border: 1px solid rgba(255,255,255,0.35);
+      outline: none;
+    }
 
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+    .title {
+      margin: 0;
+      font-size: clamp(20px, 3.2vw, 34px);
+      letter-spacing: 0.3px;
+    }
+    .subtitle {
+      margin: 4px 0 0 0;
+      color: var(--text-dim);
+      font-size: clamp(12px, 1.8vw, 14px);
+    }
 
-export default function SolarSystemPortal() {
-return (
-<div className="min-h-screen flex items-center justify-center bg-[url('https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-h-p2001a-f-2000x1500_0.png')] bg-cover bg-center p-4">
-<div className="bg-sky-200/80 rounded-2xl shadow-2xl p-6 grid grid-cols-3 gap-4 max-w-4xl">
-{solarBodies.map((body, idx) => (
-<motion.a
-key={idx}
-href={body.url}
-target="_blank"
-rel="noopener noreferrer"
-whileHover={{ scale: 1.05 }}
-whileTap={{ scale: 0.95 }}
->
-<Card className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition">
-<CardContent className="flex flex-col items-center justify-center p-4">
-<img src={body.img} alt={body.name} className="w-20 h-20 object-contain" />
-<p className="mt-2 font-semibold text-center">{body.name}</p>
-</CardContent>
-</Card>
-</motion.a>
-))}
-</div>
-</div>
-);
-}
+    /* --- Grid of Cards --- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: clamp(12px, 1.8vw, 18px);
+      margin-top: 18px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      color: inherit;
+      padding: 18px 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(12, 42, 80, 0.08);
+      transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+    }
+    .card:hover, .card:focus-visible {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: var(--shadow-hover);
+      filter: saturate(1.05);
+    }
+    .card:focus-visible {
+      outline: none;
+      box-shadow: var(--shadow-hover);
+    }
+    .card-img {
+      width: 92px;
+      height: 92px;
+      object-fit: contain;
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    .label {
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.2px;
+    }
+
+    /* --- Footer note --- */
+    .note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--text-dim);
+      text-align: center;
+    }
+
+    @media (max-width: 520px) {
+      .card { padding: 14px 12px; }
+      .card-img { width: 80px; height: 80px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="panel" role="main" aria-labelledby="title">
+    <header class="header">
+      <div>
+        <h1 id="title" class="title">Solar System Portal</h1>
+        <p class="subtitle">Tap a body to open its official NASA page in a new tab.</p>
+      </div>
+    </header>
+
+    <section class="grid" aria-label="Solar system bodies">
+      <!-- Sun + 8 planets = 9 cards -->
+      <a class="card" href="https://solarsystem.nasa.gov/solar-system/sun/overview/" target="_blank" rel="noopener noreferrer" aria-label="Open NASA page for the Sun">
+        <img class="card-img" src="https://solarsystem.nasa.gov/system/feature_items/images/27_sun.png" alt="The Sun" loading="lazy" />
+        <div class="label">Sun</div>
+      </a>
+
+      <a class="card" href="https://solarsystem.nasa.gov/planets/mercury/overview/" target="_blank" rel="noopener noreferrer" aria-label="Open NASA page for Mercury">
+        <img class="card-img" src="https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png" alt="Mercury" loading="lazy" />
+        <div class="label">Mercury</div>
+      </a>
+
+      <a class="card" href="https://solarsystem.nasa.gov/planets/venus/overview/" target="_blank" rel="noopener noreferrer" aria-label="Open NASA page for Venus">
+        <img class="card-img" src="https://solarsystem.nasa.gov/system/feature_items/images/27_venus_jg.png" alt="Venus" loading="lazy" />
+        <div class="label">Venus</div>
+      </a>
+
+      <a class="card" href="https://solarsystem.nasa.gov/planets/earth/overview/" target="_blank" rel="noopener noreferrer" aria-label="Open NASA page for Earth">
+        <img class="card-img" src="https://solarsystem.nasa.gov/system/feature_items/images/17_earth.png" alt="Earth" loading="lazy" />
+        <div class="label">Earth</div>
+      </a>
+
+      <a class="card" href="https://solarsystem.nasa.gov/planets/mars/overview/" target="_blank" rel="noopener noreferrer" aria-label="Open NASA page for Mars">
+        <img class="card-img" src="https://solarsystem.nasa.gov/system/feature_items/images/19_mars.png" alt="Mars" loading="lazy" />
+        <div class="label">Mars</div>
+      </a>
+
+      <a class="card" href="https://solarsystem.nasa.gov/planets/jupiter/overview/" target="_blank" rel="noopener noreferrer" aria-label="Open NASA page for Jupiter">
+        <img class="card-img" src="https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png" alt="Jupiter" loading="lazy" />
+        <div class="label">Jupiter</div>
+      </a>
+
+      <a class="card" href="https://solarsystem.nasa.gov/planets/saturn/overview/" target="_blank" rel="noopener noreferrer" aria-label="Open NASA page for Saturn">
+        <img class="card-img" src="https://solarsystem.nasa.gov/system/feature_items/images/28_saturn.png" alt="Saturn" loading="lazy" />
+        <div class="label">Saturn</div>
+      </a>
+
+      <a class="card" href="https://solarsystem.nasa.gov/planets/uranus/overview/" target="_blank" rel="noopener noreferrer" aria-label="Open NASA page for Uranus">
+        <img class="card-img" src="https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png" alt="Uranus" loading="lazy" />
+        <div class="label">Uranus</div>
+      </a>
+
+      <a class="card" href="https://solarsystem.nasa.gov/planets/neptune/overview/" target="_blank" rel="noopener noreferrer" aria-label="Open NASA page for Neptune">
+        <img class="card-img" src="https://solarsystem.nasa.gov/system/feature_items/images/30_neptune.png" alt="Neptune" loading="lazy" />
+        <div class="label">Neptune</div>
+      </a>
+    </section>
+
+    <p class="note">Images & background courtesy of NASA.</p>
+  </main>
+</body>
+</html>
