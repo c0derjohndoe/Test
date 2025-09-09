@@ -1,0 +1,78 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+
+
+const solarBodies = [
+{
+name: "Sun",
+img: "https://solarsystem.nasa.gov/system/feature_items/images/27_sun.png",
+url: "https://solarsystem.nasa.gov/solar-system/sun/overview/",
+},
+{
+name: "Mercury",
+img: "https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png",
+url: "https://solarsystem.nasa.gov/planets/mercury/overview/",
+},
+{
+name: "Venus",
+img: "https://solarsystem.nasa.gov/system/feature_items/images/27_venus_jg.png",
+url: "https://solarsystem.nasa.gov/planets/venus/overview/",
+},
+{
+name: "Earth",
+img: "https://solarsystem.nasa.gov/system/feature_items/images/17_earth.png",
+url: "https://solarsystem.nasa.gov/planets/earth/overview/",
+},
+{
+name: "Mars",
+img: "https://solarsystem.nasa.gov/system/feature_items/images/19_mars.png",
+url: "https://solarsystem.nasa.gov/planets/mars/overview/",
+},
+{
+name: "Jupiter",
+img: "https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png",
+url: "https://solarsystem.nasa.gov/planets/jupiter/overview/",
+},
+{
+name: "Saturn",
+img: "https://solarsystem.nasa.gov/system/feature_items/images/28_saturn.png",
+url: "https://solarsystem.nasa.gov/planets/saturn/overview/",
+},
+{
+name: "Uranus",
+img: "https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png",
+url: "https://solarsystem.nasa.gov/planets/uranus/overview/",
+},
+{
+name: "Neptune",
+img: "https://solarsystem.nasa.gov/system/feature_items/images/30_neptune.png",
+url: "https://solarsystem.nasa.gov/planets/neptune/overview/",
+},
+];
+
+
+export default function SolarSystemPortal() {
+return (
+<div className="min-h-screen flex items-center justify-center bg-[url('https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-h-p2001a-f-2000x1500_0.png')] bg-cover bg-center p-4">
+<div className="bg-sky-200/80 rounded-2xl shadow-2xl p-6 grid grid-cols-3 gap-4 max-w-4xl">
+{solarBodies.map((body, idx) => (
+<motion.a
+key={idx}
+href={body.url}
+target="_blank"
+rel="noopener noreferrer"
+whileHover={{ scale: 1.05 }}
+whileTap={{ scale: 0.95 }}
+>
+<Card className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition">
+<CardContent className="flex flex-col items-center justify-center p-4">
+<img src={body.img} alt={body.name} className="w-20 h-20 object-contain" />
+<p className="mt-2 font-semibold text-center">{body.name}</p>
+</CardContent>
+</Card>
+</motion.a>
+))}
+</div>
+</div>
+);
+}
