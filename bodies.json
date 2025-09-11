@@ -1,13 +1,13 @@
 [
   {
-    "name": "Sun",
-    "img": "https://www.nasa.gov/sites/default/files/thumbnails/image/sun_4500.png",
-    "url": ""
+    "name": "NASA",
+    "img": "https://gpm.nasa.gov/sites/default/files/document_files/NASA-Logo-Large.png",
+    "url": "https://www.nasa.gov/"
   },
   {
-    "name": "Mercury",
-    "img": "https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png",
-    "url": ""
+    "name": "Youtube",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png",
+    "url": "https://www.youtube.com/"
   },
   {
     "name": "Venus",
@@ -45,6 +45,7 @@
     "url": ""
   }
 ]
+
 
 
 
