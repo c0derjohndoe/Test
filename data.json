@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Sun",
+    "image": "https://www.nasa.gov/sites/default/files/thumbnails/image/sun_4500.png",
+    "url": ""
+  },
+  {
+    "name": "Mercury",
+    "image": "https://solarsystem.nasa.gov/system/feature_items/images/18_mercury_new.png",
+    "url": ""
+  },
+  {
+    "name": "Venus",
+    "image": "https://solarsystem.nasa.gov/system/feature_items/images/27_venus_jg.png",
+    "url": ""
+  },
+  {
+    "name": "Earth",
+    "image": "https://solarsystem.nasa.gov/system/feature_items/images/17_earth.png",
+    "url": ""
+  },
+  {
+    "name": "Mars",
+    "image": "https://solarsystem.nasa.gov/system/feature_items/images/19_mars.png",
+    "url": ""
+  },
+  {
+    "name": "Jupiter",
+    "image": "https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png",
+    "url": ""
+  },
+  {
+    "name": "Saturn",
+    "image": "https://solarsystem.nasa.gov/system/feature_items/images/28_saturn.png",
+    "url": ""
+  },
+  {
+    "name": "Uranus",
+    "image": "https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png",
+    "url": ""
+  },
+  {
+    "name": "Neptune",
+    "image": "https://solarsystem.nasa.gov/system/feature_items/images/30_neptune.png",
+    "url": ""
+  }
+]
