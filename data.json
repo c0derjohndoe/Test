@@ -1,8 +1,8 @@
 [
   {
     "name": "Sun",
-    "image": "https://www.nasa.gov/sites/default/files/thumbnails/image/sun_4500.png",
-    "url": ""
+    "image": "https://gpm.nasa.gov/sites/default/files/document_files/NASA-Logo-Large.png",
+    "url": "https://www.nasa.gov/"
   },
   {
     "name": "Mercury",
@@ -45,3 +45,4 @@
     "url": ""
   }
 ]
+
