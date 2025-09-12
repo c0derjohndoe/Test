@@ -10,19 +10,19 @@
     "url": "https://www.youtube.com/"
   },
   {
-    "name": "Venus",
-    "img": "https://solarsystem.nasa.gov/system/feature_items/images/27_venus_jg.png",
-    "url": ""
+    "name": "Wikipedia",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/d/de/Wikipedia_Logo_1.0.png",
+    "url": "https://www.wikipedia.org/"
   },
   {
-    "name": "Earth",
-    "img": "https://solarsystem.nasa.gov/system/feature_items/images/17_earth.png",
-    "url": ""
+    "name": "Canva",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/2/27/Canva-Logo.png/",
+    "url": "https://www.canva.com/"
   },
   {
-    "name": "Mars",
-    "img": "https://solarsystem.nasa.gov/system/feature_items/images/19_mars.png",
-    "url": ""
+    "name": "Github",
+    "img": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
+    "url": "https://github.com/"
   },
   {
     "name": "Jupiter",
@@ -45,6 +45,7 @@
     "url": ""
   }
 ]
+
 
 
 
