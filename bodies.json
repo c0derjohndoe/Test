@@ -16,7 +16,7 @@
   },
   {
     "name": "Canva",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/2/27/Canva-Logo.png/",
+    "img": "https://www.vhv.rs/dpng/d/275-2756337_canva-logo-logo-canva-hd-png-download.png/",
     "url": "https://www.canva.com/"
   },
   {
@@ -25,14 +25,14 @@
     "url": "https://github.com/"
   },
   {
-    "name": "Jupiter",
-    "img": "https://solarsystem.nasa.gov/system/feature_items/images/16_jupiter_new.png",
-    "url": ""
+    "name": "Google Docs",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Google_Sheets_logo_%282014-2020%29.svg/1498px-Google_Sheets_logo_%282014-2020%29.svg.png",
+    "url": "https://docs.google.com/spreadsheets/u/0/?pli=1"
   },
   {
-    "name": "Saturn",
-    "img": "https://solarsystem.nasa.gov/system/feature_items/images/28_saturn.png",
-    "url": ""
+    "name": "Gmail",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1280px-Gmail_icon_%282020%29.svg.png",
+    "url": "https://mail.google.com/mail/u/0/#inbox"
   },
   {
     "name": "Uranus",
@@ -45,6 +45,7 @@
     "url": ""
   }
 ]
+
 
 
 
