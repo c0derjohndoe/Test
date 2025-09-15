@@ -35,16 +35,32 @@
     "url": "https://mail.google.com/mail/u/0/#inbox"
   },
   {
-    "name": "Uranus",
-    "img": "https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png",
-    "url": ""
+    "name": "ChatGPT",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/ChatGPT-Logo.svg/1200px-ChatGPT-Logo.svg.png",
+    "url": "https://chatgpt.com/?model=auto"
   },
   {
-    "name": "Neptune",
-    "img": "https://solarsystem.nasa.gov/system/feature_items/images/30_neptune.png",
-    "url": ""
+    "name": "Google Translate",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Google_Translate_logo.svg/2048px-Google_Translate_logo.svg.png",
+    "url": "https://translate.google.com/?sl=auto&tl=en&op=translate"
+  },
+  {
+    "name": "Google Translate",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Google_Translate_logo.svg/2048px-Google_Translate_logo.svg.png",
+    "url": "https://translate.google.com/?sl=auto&tl=en&op=translate"
+  }
+  {
+    "name": "Google Translate",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Google_Translate_logo.svg/2048px-Google_Translate_logo.svg.png",
+    "url": "https://translate.google.com/?sl=auto&tl=en&op=translate"
+  }
+  {
+    "name": "Google Translate",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Google_Translate_logo.svg/2048px-Google_Translate_logo.svg.png",
+    "url": "https://translate.google.com/?sl=auto&tl=en&op=translate"
   }
 ]
+
 
 
 
