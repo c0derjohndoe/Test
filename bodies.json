@@ -58,8 +58,24 @@
     "name": "Wordle",
     "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Wordle_Logo.svg/1200px-Wordle_Logo.svg.png",
     "url": "https://www.nytimes.com/games/wordle/index.html"
+  },
+  {
+    "name": "HISTORY",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/History_Logo.svg/1952px-History_Logo.svg.png",
+    "url": "https://www.history.com/"
+  },
+  {
+    "name": "Wordle",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Wordle_Logo.svg/1200px-Wordle_Logo.svg.png",
+    "url": "https://www.nytimes.com/games/wordle/index.html"
+  },
+  {
+    "name": "Wordle",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Wordle_Logo.svg/1200px-Wordle_Logo.svg.png",
+    "url": "https://www.nytimes.com/games/wordle/index.html"
   }
 ]
+
 
 
 
