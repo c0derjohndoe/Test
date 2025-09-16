@@ -65,9 +65,9 @@
     "url": "https://www.history.com/"
   },
   {
-    "name": "Wordle",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Wordle_Logo.svg/1200px-Wordle_Logo.svg.png",
-    "url": "https://www.nytimes.com/games/wordle/index.html"
+    "name": "Color Picker",
+    "img": "https://s3-alpha.figma.com/hub/file/767871236/9f42c6f5-eb93-498b-953c-31322c199a3c-cover.png",
+    "url": "https://www.google.com/search?q=color+picker&oq=color+picker&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg70gEHOTQwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
   },
   {
     "name": "Wordle",
@@ -75,6 +75,7 @@
     "url": "https://www.nytimes.com/games/wordle/index.html"
   }
 ]
+
 
 
 
