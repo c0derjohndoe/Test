@@ -37,7 +37,7 @@ body {
 }
 
 /* drifting stars (three parallax layers) */
-.stars, .stars2, .stars3 {
+.stars, .stars2, .stars3, .stars4 {
   position: absolute;
   width: 300%;
   height: 300%;
@@ -49,7 +49,7 @@ body {
 
 .stars {
   background-image:
-    radial-gradient(1px 1px at 20px 30px, white 80%, transparent 100%),
+    radial-gradient(1px 1px at 20px 30px, #ff8370 80%, transparent 100%),
     radial-gradient(1px 1px at 100px 80px, #94edff 80%, transparent 100%),
     radial-gradient(1px 1px at 150px 120px, #ffba85 80%, transparent 100%),
     radial-gradient(1px 1px at 60px 160px, #ffcb70 80%, transparent 100%);
@@ -69,10 +69,19 @@ body {
 
 .stars3 {
   background-image:
-    radial-gradient(1px 1px at 80px 80px, white 50%, transparent 100%),
-    radial-gradient(1px 1px at 140px 40px, white 50%, transparent 100%),
-    radial-gradient(1px 1px at 10px 180px, white 50%, transparent 100%),
-    radial-gradient(1px 1px at 90px 110px, white 50%, transparent 100%);
+    radial-gradient(1px 1px at 80px 80px, #ff7070 50%, transparent 100%),
+    radial-gradient(1px 1px at 140px 40px, #ffba85 50%, transparent 100%),
+    radial-gradient(1px 1px at 10px 180px, #ffa270 50%, transparent 100%),
+    radial-gradient(1px 1px at 90px 110px, #94edff 50%, transparent 100%);
+  animation: starDrift3 90s linear infinite;
+  opacity: 0.3;
+}
+.stars4 {
+  background-image:
+    radial-gradient(1px 1px at 100px 100px, #ff7070 50%, transparent 100%),
+    radial-gradient(1px 1px at 165px 45px, #ffba85 50%, transparent 100%),
+    radial-gradient(1px 1px at 10px 155px, #ffa270 50%, transparent 100%),
+    radial-gradient(1px 1px at 190px 130px, #94edff 50%, transparent 100%);
   animation: starDrift3 90s linear infinite;
   opacity: 0.3;
 }
@@ -155,6 +164,7 @@ body {
   </script>
 </body>
 </html>
+
 
 
 
